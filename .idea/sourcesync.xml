@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SourceSyncRemoteConfigurationsService"><![CDATA[{
+  "connections": [
+    {
+      "type": "ssh_configuration",
+      "name": "WebDevProject",
+      "hostname": "chronos.cs.elon.edu",
+      "username": "khoadley",
+      "remote_workspace_path": "/home/khoadley/www"
+    }
+  ],
+  "mainConnection": "WebDevProject"
+}]]></component>
+</project>

@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+  background-color: #edeef0;;
+
+}
+
+/*  ============= HOME PAGE CSS ============== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .025em 2em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: white;
+  background-color: #1E2A56;
+  font: 1.2em "Fira Sans", sans-serif;
+
+}
+
+header h2{
+    font: 1em "Fira Sans", sans-serif;
+    background-color: #1E2A56;
+}
+
+.pageLabel h1{
+    font: 1.5em "Fira Sans", sans-serif;
+    background-color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logoContainer h1{
+    font: 2em "Fira Sans", sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke: .03em red;
+    background-color: #1E2A56;
+}
+
+.logoContainer{
+    background-color: #1E2A56;
+}
+
+.pageOptions {
+  display: flex;
+  gap: 1.5em;
+  background-color: #1E2A56;
+}
+
+.pageOptions a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease, transform 0.2s ease;
+  background-color: #1E2A56;
+}
+
+
+.pageOptions a:hover {
+  color: red;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.pageLabel{
+    padding: .1em 2em;
+    background-color: white;
+    color: #1E2A56;
+    width: 100%;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background-color: #EDEEF0;
+    gap: .5em;
+    width: 100%;
+
+}
+
+.headlinesContainer{
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    gap: .5em;
+}
+
+img{
+    width: 50em;
+    height: auto;
+}
+
+.headlinesContainer h2{
+    background-color: white;
+    font: 1.25em "Fira Sans", sans-serif;
+    font-weight: bold;
+    color: #48494a;
+    color: #1E2A56;
+    padding: 0em 1em;
+
+}
+
+.superbowlContainer{
+    background-color: white;
+    gap: .5em;
+
+}
+
+.numberOneSeedContainer{
+    background-color: white;
+    gap: .5em;
+}
+
+.aboutContainer{
+    background-color: white;
+    border-radius: 1em;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.aboutContainer h2{
+    background-color: white;
+    padding: .1em 1em;
+    font: 2em "Fira Sans", sans-serif;
+    text-align:center;
+    font-weight: bold;
+    color: #1E2A56;
+
+}
+
+.aboutContainer p{
+    background-color: white;
+    padding: .1em 1em;
+    font: 1.25em "Fira Sans", sans-serif;
+    color: #1E2A56;
+    width: 100%;
+    flex: none;
+
+}
+
+footer {
+  background: #1E2A56;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  width: 100%;
+}
+
+.newsletterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background: #1E2A56;
+}
+
+.newsletterContainer h2 {
+  font: 1.5em "Fira Sans", sans-serif;
+  margin-bottom: 0.5em;
+  background: #1E2A56;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  justify-content: center;
+  max-width: 700px;
+  background: #1E2A56;
+}
+
+.newsletterForm input[type="email"],
+.newsletterForm input[type="text"],
+.newsletterForm select {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: none;
+  font: 1em "Fira Sans", sans-serif;
+  width: 250px;
+}
+
+.newsletterForm select {
+  background-color: white;
+  color: #1E2A56;
+}
+
+.promoOptIn {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font: 0.9em "Fira Sans", sans-serif;
+  color: #edeef0;
+  width: 100%;
+  justify-content: center;
+  background: #1E2A56;
+}
+
+.promoOptIn input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.newsletterForm button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font: 1em "Fira Sans", sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.newsletterForm button:hover {
+  background-color: #c40000;
+  transform: scale(1.05);
+}
+
+footer p {
+  font: 1em "Fira Sans", sans-serif;
+  color: #edeef0;
+  background: #1E2A56;
+}
+
+/*  ============= POST SEASON CSS ============== */
+
+.postSeasonImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.postSeasonImageContainer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1em;
+}
+
+/*  ============= PLAYERS CSS ============== */
+#playerTable {
+   width: 90%;
+   margin: 2rem auto;
+   border-collapse: collapse;
+   font: 1.2em "Fira Sans", sans-serif;
+   color: #48494a;
+
+}
+
+#popupTitle {
+    font: 1.2em "Fira Sans", sans-serif;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+
+}
+
+#playerForm {
+    padding: 0.75rem 1rem;
+
+}
+
+#playerTable th,
+#playerTable td {
+    border: 1px solid #ccc;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    width: 180px;
+}
+
+#playerTable thead {
+    font-weight: bold;
+}
+
+
+/* ====== TEAMS CSS ======== */
+.teamCardsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 2em;
+}
+
+.teamContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em;
+  width: 20em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.teamContainer:hover {
+  transform: scale(1.05);
+}
+
+.teamImageContainer img{
+  width: 10em;
+  height: auto;
+  background: white;
+}
+
+.teamImageContainer{
+    background: white;
+}
+
+.teamNameContainer{
+    background: white;
+}
+
+.teamNameContainer h2{
+  background: white;
+  font: 1.2em "Fira Sans", sans-serif;
+  color: #48494a;
+  font-weight:bold;
+}
+
+.mainButton {
+  display: flex;
+  justify-content: center;
+  height: 4em;
+  background-color: #EDEEF0;
+}
+
+.teamsButton {
+  background-color: #1E2A56;
+  color: white;
+  font: 1.2em "Fira Sans", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75em;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.teamsButton:hover {
+  background-color: #FF0000;
+  transform: scale(1.05);
+}
+
+
+/* ====== MEDIA TAG ======= */
+@media (max-width: 1070px) {
+  .contentContainer {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1em;
+  }
+
+  .aboutContainer,
+  .headlinesContainer {
+    width: 100%;
+    flex: none;
+  }
+
+  .headlinesContainer img {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  .pageOptions {
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  .pageOptions h2{
+    font-size: .7em
+  }
+  .playerContentContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .playerContainer {
+      width: 80%;
+  }
+
+  .teamCardsContainer{
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .teamContainer{
+      width: 80%;
+  }
+
+}

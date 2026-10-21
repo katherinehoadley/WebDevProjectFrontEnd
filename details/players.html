@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NFL 2024 - Players</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script src="../js/constants/urlConstants.js"></script>
+    <script src="../js/models/players.js"></script>
+    <script src="../js/views/views.js"></script>
+    <script src="../js/services/services.js"></script>
+    <script>
+        addEventListener("DOMContentLoaded", (event) => {loadPlayers()});
+    </script>
+</head>
+<body>
+<header>
+    <div class="logoContainer">
+        <h1>NFL 2024</h1>
+    </div>
+    <nav class="pageOptions">
+        <a href="../index.html"><h2>Home</h2></a>
+        <a href="players.html"><h2>Players</h2></a>
+        <a href="teams.html"><h2>Teams</h2></a>
+        <a href="postSeason.html"><h2>Post Season</h2></a>
+    </nav>
+</header>
+<main>
+    <div class="pageLabel">
+        <h1>Players</h1>
+    </div>
+    <div class="actionBar">
+        <button class="btn btn-open" onClick="showPlayerPopup()">Create Player</button>
+    </div>
+    <!--Model Create Course Modal-->
+    <section id="newPlayerPopup" class="modal hidden">
+        <div class="flex">
+            <h2 id="popupTitle">Add a Player</h2>
+            <button class="btn-close" onClick="hidePlayerPopup()">⨉</button>
+        </div>
+        <div>
+            <form id="playerForm" action="javascript:submitPlayer()">
+                <input type="hidden" id="playerId"/>
+                <div class="formField">
+                    <input type="text" id="playerName" placeholder="Enter player name"/>
+                </div>
+                <div class="formField">
+                    <input type="text" id="playerTeam" placeholder="Enter player team"/>
+                </div>
+                <div class="formField">
+                    <input type="text" id="playerPosition" placeholder="Enter player position"/>
+                </div>
+                <div class="formField">
+                    <input type="text" id="playerImage" placeholder="Enter player image"/>
+                </div>
+                <div class="formField">
+                    <button class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="overlay hidden"></div>
+
+    <table id="playerTable">
+        <thead id="playerTableHeader">
+            <th>Player ID</th>
+            <th>Player Name</th>
+            <th>Player Team</th>
+            <th>Player Position</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </thead>
+        <tbody id="playerTableBody">
+        </tbody>
+    </table>
+
+    <!--
+    <div class="playerContentContainer">
+        <div class="playerContainer">
+            <div class="playerImageContainer">
+                <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3929630.png&w=350&h=254" alt="Saquon Barkley">
+            </div>
+            <div class="playerInfoContainer">
+                <div class="playerName"><p>Saquon Barkley</p></div>
+                <div class="team"><p>Philadelphia Eagles</p></div>
+            </div>
+        </div>
+        <div class="playerContainer">
+            <div class="playerImageContainer">
+                <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png" alt="Lamar Jackson">
+            </div>
+            <div class="playerInfoContainer">
+                <div class="playerName"><p>Lamar Jackson</p></div>
+                <div class="team"><p>Baltimore Ravens</p></div>
+            </div>
+        </div>
+        <div class="playerContainer">
+            <div class="playerImageContainer">
+                <img src="https://a.espncdn.com/i/headshots/nfl/players/full/3918298.png" alt="Josh Allen">
+            </div>
+            <div class="playerInfoContainer">
+                <div class="playerName"><p>Josh Allen</p></div>
+                <div class="team"><p>Buffalo Bills</p></div>
+            </div>
+        </div>
+        <div class="playerContainer">
+            <div class="playerImageContainer">
+                <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4362628.png" alt="Ja'Marr Chase">
+            </div>
+            <div class="playerInfoContainer">
+                <div class="playerName"><p>Ja'Marr Chase</p></div>
+                <div class="team"><p>Cincinnati Bengals</p></div>
+            </div>
+        </div>
+    </div>
+    -->
+</main>
